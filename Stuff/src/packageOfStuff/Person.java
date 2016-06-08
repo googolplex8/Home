@@ -6,6 +6,8 @@ public class Person {
 	public String name;
 	public int age;
 	public String identification;
+	int population = 0;
+	Person[] people = new Person[0];
 
 	public static void main(String[] args) {
 		Random rand = new Random();
@@ -14,14 +16,16 @@ public class Person {
 		Person p2 = new Person("Nacho", 21, "2");
 		Person p3 = new Person("Felipe", rand.nextInt(100), "3");
 	
+	
+		
 		System.out.println(p2.getAge());
 		System.out.println(p1.convertId(p1.getidentification()));
 		
-		if (p3.getAge() == p2.getAge() || p3.getAge() == p2.getAge()) {
-			System.out.println("Some one is the same age as Felipe");
-		} else {
-			System.out.println("no one is the same age");
-		}
+//		if (p3.getAge() == p2.getAge() || p3.getAge() == p2.getAge()) {
+//			System.out.println("Some one is the same age as Felipe");
+//		} else {
+//			System.out.println("no one is the same age");
+//		}
 	}
 
 	Person(String name, int age, String identification) {
@@ -30,6 +34,12 @@ public class Person {
 		this.setidentification(identification);
 	}
 
+	void createPerson(String name, int age, String identification){
+		people[0] = new Person(name, age, identification);
+		population+=1;
+	}
+		
+	
 	String getName() {
 		return name;
 	}

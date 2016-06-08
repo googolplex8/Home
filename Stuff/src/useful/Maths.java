@@ -1,4 +1,4 @@
-package packageOfStuff;
+package useful;
 
 public class Maths {
 
@@ -8,7 +8,6 @@ public class Maths {
 		// new Maths().Permutation(10, 7);
 		// new Maths().isIndependent(.2, .5, .1);
 		new Maths().quad(1, 5, -6);
-		Math.
 
 	}
 
